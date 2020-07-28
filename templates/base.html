@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% block content %}
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" href="{% block icon %}{% endblock icon %}" />
+	<title>{% block title %}{% endblock title %}</title>
+	<style>
+		body {
+			font-family: "Operator Mono", "Hack", "Fira Code", "Ubuntu Mono", "Droid Sans Mono", "Liberation Mono", "Source Code Pro", Menlo, Consolas, Courier, monospace;
+			margin: 0;
+			background-color: #282828;
+			color: white;
+		}
+
+		.container {
+			padding: 5em;
+		}
+
+		h1 {
+			font-weight: bold;
+			font-size: 1.7vw;
+		}
+
+		h3 {
+			font-weight: bold;
+			font-size: 1.3vw;
+		}
+
+		.centre {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-right: -50%;
+			transform: translateX(-50%) translateY(-50%);
+			-ms-transform: translateX(-50%) translateY(-50%);
+			text-align: center;
+		}
+
+		.text-left {
+			text-align: left;
+		}
+
+		.circle {
+			height: 30em;
+			width: 30em;
+			margin: 5em 5em;
+			background-color: #cbcbcb;
+			color: #181818;
+			border-radius: 50%;
+			display: inline-block;
+		}
+
+		@media only screen and (max-width: 1200px) {
+			.circle {
+				height: 45em;
+				width: 45em;
+			}
+
+			h1 {
+				font-size: 48px;
+			}
+
+			h3 {
+				font-size: 32px;
+			}
+		}
+
+		a:any-link {
+			text-decoration: underline solid 2px #181818;
+			color: inherit;
+		}
+	</style>
+
+	{% block head %}
+	{% endblock head %}
+</head>
+
+<body>
+	<div class="centre">
+		<div class="circle">
+			<div class="centre">
+				<div class="container">
+					{% block body %}
+					{% endblock body %}
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+{% endblock content %}
+
+</html>
+
+<!-- vim: set ff=unix autoindent ts=4 sw=4 tw=0 noet :-->

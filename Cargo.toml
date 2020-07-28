@@ -1,0 +1,43 @@
+[package]
+name = "takabe"
+version = "0.1.0"
+authors = ["Mariell Hoversholm <proximyst@proximyst.com>"]
+edition = "2018"
+
+[dependencies]
+dotenv = "0.15"
+
+thiserror = "1"
+anyhow = "1"
+
+log = "0.4"
+pretty_env_logger = "0.4"
+
+strum = "0.18"
+strum_macros = "0.18"
+
+futures = "0.3"
+
+serde_json = "1"
+
+blake2 = "0.9"
+
+actix-rt = "1"
+actix-web = "2"
+tera = "1"
+
+rand = "0.7"
+
+[dependencies.serde]
+version = "1"
+features = [
+	"derive",
+]
+
+[dependencies.sqlx]
+version = "^0.4.0-beta"
+default-features = false
+features = [
+	"runtime-actix",
+	"sqlite",
+]

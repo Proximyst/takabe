@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}
+takabe
+{% endblock title %}
+
+{% block body %}
+<div class="text-left">
+	<form method="GET" action="new">
+		<label for="token">
+			Token: <input name="token" type="password" required></input>
+		</label>
+		<br><br>
+		<label for="url">
+			URL: <input name="url" type="url" required></input>
+		</label>
+		<br><br>
+		<label for="shortened">
+			Alias: <input name="shortened" type="text"></input>
+		</label>
+		<br><br>
+		<button type="submit">Shorten</button>
+	</form>
+</div>
+{% endblock body %}
