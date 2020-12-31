@@ -26,7 +26,7 @@ async fn main() {
     ));
     eprintln!(
         r#"
-{name} Copyright (C) 2020 {}
+{name} Copyright (C) 2020-2021 {}
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it
 under certain conditions. See the GitHub repository for more
